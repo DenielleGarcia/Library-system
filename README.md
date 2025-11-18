@@ -1,55 +1,91 @@
-## LIBRARY SYSTEM MIDTERM
+# 📚 Library Management System — Midterm Project
 
-## Description / Overview
-This project is a **Library Management System** built using Laravel. It allows users to manage books, borrowers, 
-and borrowing transactions efficiently in a web-based interface.
+## 🧠 About the Project
+This project was created as part of the **Midterm Examination**.  
+It is a **Laravel-based Library Management System** designed to demonstrate CRUD functionality — *Create, Read, Update, Delete* — specifically for managing library resources.
 
-## Objectives
-- Learn and apply Laravel framework fundamentals.
-- Implement CRUD operations for books and borrowers.
-- Manage relationships between books and borrowers.
-- Create a responsive and user-friendly web interface.
-- Understand and practice version control with Git.
+The system allows users to manage **books**, **borrowers**, and **transactions**, ensuring an efficient way to track library assets using a MySQL database.
 
-## Features / Functionality
-- Add, edit, and delete books.
-- Register and manage borrowers.
-- Track book borrow and return transactions.
-- Search and filter books and borrowers.
-- User authentication (login/signup).
+---
 
-## Installation Instructions
-1. Clone the repository:
-   ```bash
-   git clone <https://github.com/janricmadayag/DGarcia-JMadayag.git>
-   
-## Navigate to the project folder:
-   cd library-system
+## 🎯 Objectives
+- Learn and apply **Laravel framework** fundamentals.
+- Implement **CRUD operations** for books and borrowers.
+- Manage **Eloquent relationships** between books and borrowers.
+- Create a **responsive and user-friendly** web interface using Blade.
+- Understand and practice **version control with Git**.
 
-   ## Install dependencies using Composer:
-   composer install
+---
 
-   ## Copy .env.example to .env and configure database credentials:
-   cp .env.example .env
+## ⚙️ Features / Functionality
+- ➕ **Add/Manage Books** — Add, edit, and delete book records.
+- 👥 **Manage Borrowers** — Register and update borrower details.
+- 🔄 **Transactions** — Track book borrowing and returning activities.
+- 🔍 **Search & Filter** — Easily locate books and borrowers.
+- 🔐 **Authentication** — Secure user login and signup functionality.
 
-   ## Generate application key:
-   php artisan key:generate
+---
 
-   ## Run database migrations:
-   php artisan migrate
+## 🧰 Technologies Used
 
-   ## Start the development server:
-   php artisan serve
+| Technology | Description |
+|-------------|-------------|
+| **Laravel** | PHP framework for MVC structure |
+| **PHP 8.x** | Backend scripting language |
+| **MySQL** | Relational database for data storage |
+| **Blade** | Laravel’s templating engine |
+| **Composer** | PHP dependency manager |
+| **Git/GitHub** | Version control |
 
-   ## Usage
-   - Open the browser and navigate to http://127.0.0.1:8000.
-   - Register a new user or log in with existing credentials.
-   - Manage books and borrowers using the dashboard interface.
-   - Track borrowing and returning of books easily.
+---
 
-   ## Screenshots/ Code Snippets
-   Routes Example (routes/web.php)
-   use App\Http\Controllers\BookController;
+## 💻 Installation Instructions
+
+Follow these steps to set up and run the project locally:
+
+```bash
+# 1️⃣ Clone the repository
+git clone [https://github.com/DenielleGarcia/Library-system.git](https://github.com/DenielleGarcia/Library-system.git)
+
+# 2️⃣ Navigate into the project directory
+cd library-system
+
+# 3️⃣ Install dependencies
+composer install
+
+# 4️⃣ Copy the example environment file
+cp .env.example .env
+
+# 5️⃣ Configure your database credentials in the .env file
+
+# 6️⃣ Generate an application key
+php artisan key:generate
+
+# 7️⃣ Run database migrations
+php artisan migrate
+
+# 8️⃣ Start the development server
+php artisan serve
+
+
+## 🚀 Usage
+- Open your browser and navigate to http://127.0.0.1:8000.
+
+- Register a new user account or log in with existing credentials.
+
+- Use the dashboard to access Books or Borrowers.
+
+- Click "Edit" or "Delete" to manage existing records.
+
+- All changes are automatically saved to the database.
+
+
+## 💻 Screenshots / Code Snippets
+
+# Routes Example (routes/web.php)
+PHP
+
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\BorrowerController;
 
 Route::get('/', function () {
@@ -59,8 +95,10 @@ Route::get('/', function () {
 Route::resource('books', BookController::class);
 Route::resource('borrowers', BorrowerController::class);
 
- ## Controller Example (app/Http/Controllers/BookController.php)
-    namespace App\Http\Controllers;
+# Controller Example (app/Http/Controllers/BookController.php)
+PHP
+
+namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
@@ -79,9 +117,10 @@ class BookController extends Controller
         return redirect()->route('books.index');
     }
 }
+# Blade Template Example (resources/views/books/index.blade.php)
+HTML
 
- ## Blade Template Example (resources/views/books/index.blade.php)
-    @extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 <h1>Books List</h1>
@@ -103,9 +142,10 @@ class BookController extends Controller
 </table>
 @endsection
 
-## Folder Structure
-<details> <summary>Click to expand</summary>
-    library-system/
+
+## 📂 Folder Structure
+
+library-system/
 ├── app/
 │   ├── Http/
 │   │   └── Controllers/
@@ -129,32 +169,21 @@ class BookController extends Controller
 │   └── web.php
 ├── .env
 └── composer.json
-</details>
-
-## Contributors
-
-    Garcia, Denielle Gerlad A.
-    Partner's Name (Madayag, Janric)
-
-## License
-    
-    This project is licensed under the MIT License.
-    
----
-
-✅ **What’s important for GitHub visibility:**
-1. Make sure the file is named exactly `README.md` (all caps) in the **root folder** of your repository.
-2. Commit and push your changes to the branch:
-
-```bash
-git add README.md
-git commit -m "Add full README with screenshots, code snippets, and folder structure"
-git push
 
 
+## 👥 Contributors
+# Name                      # Role
+Denielle Gerald A. Garcia   Developer / Repository Owner
+Janric Madayag              Partner / Documentation   
 
 
+## 📄 License
+This project is licensed under the MIT License.
 
 
+### How to preview it in VS Code:
+After you paste this code into your `README.md` file:
+1.  Press **Ctrl + K**, then let go and press **V**.
+2.  This will open a "Preview" tab on the right side so you can see how it will look on GitHub (with all the bold text and tables rendered nicely).
 
-
+Don't forget to save (**Ctrl + S**) before going back to Git Bash!
