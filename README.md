@@ -149,7 +149,7 @@ class BookController extends Controller
 ```bash
 git add README.md
 git commit -m "Add full README with screenshots, code snippets, and folder structure"
-git push origin feature-branch
+git push
 
 
 
